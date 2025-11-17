@@ -60,7 +60,7 @@ Welcome to my portfolio site.
   max-width: 700px;
   margin: 1.5rem auto;
   position: relative;
-  overflow: hidden; /* hide stuff outside the frame */
+  overflow: hidden; /* hide overflow so slides look like they swipe */
 }
 
 /* Track holding all slides side by side */
@@ -73,10 +73,12 @@ Welcome to my portfolio site.
 .slide {
   min-width: 100%;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .slide img {
   width: 100%;
+  display: block;
   border-radius: 6px;
 }
 
@@ -216,13 +218,18 @@ const track = document.querySelector(".slides-track");
 const slides = document.getElementsByClassName("slide");
 const dots = document.getElementsByClassName("dot");
 
+function getSlideWidth() {
+  if (!slides.length) return 0;
+  return slides[0].getBoundingClientRect().width;
+}
+
 function updateSlidePosition() {
   if (!slides.length || !container || !track) return;
 
   if (currentIndex < 0) currentIndex = slides.length - 1;
   if (currentIndex >= slides.length) currentIndex = 0;
 
-  const width = container.clientWidth; // use actual container width in px
+  const width = getSlideWidth();
   const offset = -currentIndex * width;
   track.style.transform = "translateX(" + offset + "px)";
 
@@ -292,7 +299,7 @@ if (container) {
     touchStartX = null;
   }, { passive: true });
 
-  // Recalculate position on resize so slide stays aligned
+  // Keep slides aligned on resize
   window.addEventListener("resize", function() {
     updateSlidePosition();
   });
@@ -302,6 +309,7 @@ if (container) {
 updateSlidePosition();
 startAutoSlide();
 </script>
+
 
 
 
