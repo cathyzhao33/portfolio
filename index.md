@@ -60,10 +60,19 @@ Welcome to my portfolio site.
   max-width: 700px;
   margin: 1.5rem auto;
   position: relative;
+  overflow: hidden; /* hide stuff outside the frame */
 }
 
+/* Track holding all slides side by side */
+.slides-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Single slide */
 .slide {
-  display: none;
+  min-width: 100%;
+  flex-shrink: 0;
 }
 
 .slide img {
@@ -71,6 +80,14 @@ Welcome to my portfolio site.
   border-radius: 6px;
 }
 
+.caption {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 8px;
+  color: #444;
+}
+
+/* Prev / Next arrows */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -84,6 +101,7 @@ Welcome to my portfolio site.
   border-radius: 0 3px 3px 0;
   user-select: none;
   background: rgba(255, 255, 255, 0.7);
+  z-index: 2;
 }
 
 .next {
@@ -93,24 +111,6 @@ Welcome to my portfolio site.
 
 .prev:hover, .next:hover {
   background-color: rgba(255, 255, 255, 0.95);
-}
-
-.caption {
-  text-align: center;
-  font-size: 0.9rem;
-  padding: 8px;
-  color: #444;
-}
-
-/* Fade-in animation for active slide */
-.slide.active {
-  display: block;
-  animation: fade 0.6s ease-in-out;
-}
-
-@keyframes fade {
-  from { opacity: 0; }
-  to   { opacity: 1; }
 }
 
 /* Dots / indicators */
@@ -139,52 +139,54 @@ Welcome to my portfolio site.
 
 <div class="slideshow-container">
 
-  <!-- 1 -->
-  <div class="slide">
-    <img src="assets/img/IMG_2794.JPG" alt="Lights on Lake Union" />
-    <div class="caption">Lights on Lake Union from my hometown, Seattle, Washington.</div>
-  </div>
+  <div class="slides-track">
+    <!-- 1 -->
+    <div class="slide">
+      <img src="assets/img/IMG_2794.JPG" alt="Lights on Lake Union" />
+      <div class="caption">Lights on Lake Union from my hometown, Seattle, Washington.</div>
+    </div>
 
-  <!-- 2 -->
-  <div class="slide">
-    <img src="assets/img/IMG_3860.JPG" alt="Cherry blossoms at UW" />
-    <div class="caption">Cherry blossoms at the University of Washington.</div>
-  </div>
+    <!-- 2 -->
+    <div class="slide">
+      <img src="assets/img/IMG_3860.JPG" alt="Cherry blossoms at UW" />
+      <div class="caption">Cherry blossoms at the University of Washington.</div>
+    </div>
 
-  <!-- 3 -->
-  <div class="slide">
-    <img src="assets/img/IMG_1847.JPG" alt="Apple Fest in Ithaca" />
-    <div class="caption">First time going to Apple Fest in Ithaca.</div>
-  </div>
+    <!-- 3 -->
+    <div class="slide">
+      <img src="assets/img/IMG_1847.JPG" alt="Apple Fest in Ithaca" />
+      <div class="caption">First time going to Apple Fest in Ithaca.</div>
+    </div>
 
-  <!-- 4 -->
-  <div class="slide">
-    <img src="assets/img/IMG_3226.JPG" alt="Fuertes Observatory" />
-    <div class="caption">Viewing the night sky at Cornell’s Fuertes Observatory.</div>
-  </div>
+    <!-- 4 -->
+    <div class="slide">
+      <img src="assets/img/IMG_3226.JPG" alt="Fuertes Observatory" />
+      <div class="caption">Viewing the night sky at Cornell’s Fuertes Observatory.</div>
+    </div>
 
-  <!-- 5 -->
-  <div class="slide">
-    <img src="assets/img/IMG_5800.JPG" alt="Texas BBQ" />
-    <div class="caption">Trying real Texas BBQ in Austin.</div>
-  </div>
+    <!-- 5 -->
+    <div class="slide">
+      <img src="assets/img/IMG_5800.JPG" alt="Texas BBQ" />
+      <div class="caption">Trying real Texas BBQ in Austin.</div>
+    </div>
 
-  <!-- 6 -->
-  <div class="slide">
-    <img src="assets/img/IMG_7682.JPG" alt="Free lunch at work" />
-    <div class="caption">Free lunch from leftover conference catering.</div>
-  </div>
+    <!-- 6 -->
+    <div class="slide">
+      <img src="assets/img/IMG_7682.JPG" alt="Free lunch at work" />
+      <div class="caption">Free lunch from leftover conference catering.</div>
+    </div>
 
-  <!-- 7 -->
-  <div class="slide">
-    <img src="assets/img/IMG_6239.JPG" alt="Dessert in Austin" />
-    <div class="caption">Dessert from my favorite restaurant during my internship.</div>
-  </div>
+    <!-- 7 -->
+    <div class="slide">
+      <img src="assets/img/IMG_6239.JPG" alt="Dessert in Austin" />
+      <div class="caption">Dessert from my favorite restaurant during my internship.</div>
+    </div>
 
-  <!-- 8 -->
-  <div class="slide">
-    <img src="assets/img/IMG_7380.JPG" alt="Le Chat Blanc" />
-    <div class="caption">Le Chat Blanc at the Musée d’Orsay.</div>
+    <!-- 8 -->
+    <div class="slide">
+      <img src="assets/img/IMG_7380.JPG" alt="Le Chat Blanc" />
+      <div class="caption">Le Chat Blanc at the Musée d’Orsay.</div>
+    </div>
   </div>
 
   <!-- Buttons -->
@@ -206,51 +208,48 @@ Welcome to my portfolio site.
 </div>
 
 <script>
-let slideIndex = 1;
+let currentIndex = 0;
 let autoTimer = null;
 
+const track = document.querySelector(".slides-track");
 const slides = document.getElementsByClassName("slide");
 const dots = document.getElementsByClassName("dot");
 const container = document.querySelector(".slideshow-container");
 
-function showSlides(n) {
+function updateSlidePosition() {
   if (!slides.length) return;
+  if (currentIndex < 0) currentIndex = slides.length - 1;
+  if (currentIndex >= slides.length) currentIndex = 0;
 
-  if (n > slides.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = slides.length; }
+  const offset = -currentIndex * 100;
+  track.style.transform = "translateX(" + offset + "%)";
 
-  // Clear all
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("active");
-  }
+  // update dots
   for (let i = 0; i < dots.length; i++) {
     dots[i].classList.remove("active");
   }
-
-  // Activate current
-  slides[slideIndex - 1].classList.add("active");
-  if (dots[slideIndex - 1]) {
-    dots[slideIndex - 1].classList.add("active");
+  if (dots[currentIndex]) {
+    dots[currentIndex].classList.add("active");
   }
 }
 
 function plusSlides(n) {
-  slideIndex += n;
-  showSlides(slideIndex);
+  currentIndex += n;
+  updateSlidePosition();
   resetAutoSlide();
 }
 
 function currentSlide(n) {
-  slideIndex = n;
-  showSlides(slideIndex);
+  currentIndex = n - 1;
+  updateSlidePosition();
   resetAutoSlide();
 }
 
 function startAutoSlide() {
   autoTimer = setInterval(function() {
-    slideIndex++;
-    showSlides(slideIndex);
-  }, 5000); // 5 seconds per slide
+    currentIndex++;
+    updateSlidePosition();
+  }, 5000); // 5 seconds
 }
 
 function resetAutoSlide() {
@@ -293,9 +292,10 @@ if (container) {
 }
 
 // Init
-showSlides(slideIndex);
+updateSlidePosition();
 startAutoSlide();
 </script>
+
 
 
 
