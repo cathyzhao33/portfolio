@@ -52,7 +52,7 @@ Welcome to my portfolio site.
 
 ---
 
-## Internship Experience
+## Internship Experience {#internship}
 
 I spent the Summer of 2025 working as a Software Development Engineer Intern at Amazon Web Services in Austin, TX. In this role, I worked on building and improving internal tools using TypeScript, React (including Redux and sagas), and AWS services. Over the 12-week internship, I deepened my skills in Git workflows, debugging, and working with large codebases, and I learned how to unblock myself by reading documentation and collaborating with other engineers.  
 
@@ -91,7 +91,7 @@ This internship pushed me to dive deeply into unfamiliar systems, navigate ambig
 
 ---
 
-## Gallery
+## Gallery {#gallery}
 
 <div class="gallery">
 
