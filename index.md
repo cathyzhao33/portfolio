@@ -54,62 +54,128 @@ Welcome to my portfolio site.
 
 ## Gallery {#gallery}
 
-<div class="gallery">
+<!-- SLIDESHOW -->
+<style>
+.slideshow-container {
+  max-width: 700px;
+  margin: 1.5rem auto;
+  position: relative;
+}
 
-<figure>
-  <img src="assets/img/IMG_2794.JPG" alt="Lights on Lake Union" />
-  <figcaption>
-    Lights on Lake Union from my hometown, Seattle, Washington.
-  </figcaption>
-</figure>
+.slide {
+  display: none;
+}
 
-<figure>
-  <img src="assets/img/IMG_3860.JPG" alt="Cherry blossoms at UW" />
-  <figcaption>
-    Cherry blossoms at the University of Washington. Growing up, I would go see these every spring with my family.
-  </figcaption>
-</figure>
+.slide img {
+  width: 100%;
+  border-radius: 6px;
+}
 
-<figure>
-  <img src="assets/img/IMG_1847.JPG" alt="Apple Fest in Ithaca" />
-  <figcaption>
-    First time going to Apple Fest, a huge fall tradition in Ithaca that attracts locals and students from the surrounding area.
-  </figcaption>
-</figure>
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 12px;
+  margin-top: -22px;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background: rgba(255, 255, 255, 0.7);
+}
 
-<figure>
-  <img src="assets/img/IMG_3226.JPG" alt="Fuertes Observatory" />
-  <figcaption>
-    Viewing the night sky at Cornell’s Fuertes Observatory with friends. This antique telescope is one of the few that has its original, unmodified clock drive left in operation.
-  </figcaption>
-</figure>
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
 
-<figure>
-  <img src="assets/img/IMG_5800.JPG" alt="Texas BBQ" />
-  <figcaption>
-    First time trying real Texas BBQ. I spent two summers interning in Austin with the same team, and everyone told me that tasting authentic BBQ was a must.
-  </figcaption>
-</figure>
+.prev:hover, .next:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+}
 
-<figure>
-  <img src="assets/img/IMG_7682.JPG" alt="Free lunch at work" />
-  <figcaption>
-    Lunch from leftover conference catering at work. We had “vulture” Slack channels for free food, and sprinting over with my teammates became one of my favorite internship rituals.
-  </figcaption>
-</figure>
+.caption {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 8px;
+  color: #444;
+}
+</style>
 
-<figure>
-  <img src="assets/img/IMG_6239.JPG" alt="Dessert in Austin" />
-  <figcaption>
-    Dessert from my favorite restaurant during my internship. Exploring local restaurants and dessert spots was one of the best parts of living in a new city.
-  </figcaption>
-</figure>
+<div class="slideshow-container">
 
-<figure>
-  <img src="assets/img/IMG_7380.JPG" alt="Le Chat Blanc" />
-  <figcaption>
-    Le Chat Blanc at the Musée d’Orsay. A little strange, a little cute — this cat mid-stretch somehow captures exactly what I love about cats.
-  </figcaption>
-</figure>
+  <!-- 1 -->
+  <div class="slide">
+    <img src="assets/img/IMG_2794.JPG">
+    <div class="caption">Lights on Lake Union from my hometown, Seattle, Washington.</div>
+  </div>
+
+  <!-- 2 -->
+  <div class="slide">
+    <img src="assets/img/IMG_3860.JPG">
+    <div class="caption">Cherry blossoms at the University of Washington.</div>
+  </div>
+
+  <!-- 3 -->
+  <div class="slide">
+    <img src="assets/img/IMG_1847.JPG">
+    <div class="caption">First time going to Apple Fest in Ithaca.</div>
+  </div>
+
+  <!-- 4 -->
+  <div class="slide">
+    <img src="assets/img/IMG_3226.JPG">
+    <div class="caption">Viewing the night sky at Cornell’s Fuertes Observatory.</div>
+  </div>
+
+  <!-- 5 -->
+  <div class="slide">
+    <img src="assets/img/IMG_5800.JPG">
+    <div class="caption">Trying real Texas BBQ in Austin.</div>
+  </div>
+
+  <!-- 6 -->
+  <div class="slide">
+    <img src="assets/img/IMG_7682.JPG">
+    <div class="caption">Free lunch from leftover conference catering.</div>
+  </div>
+
+  <!-- 7 -->
+  <div class="slide">
+    <img src="assets/img/IMG_6239.JPG">
+    <div class="caption">Dessert from my favorite restaurant during my internship.</div>
+  </div>
+
+  <!-- 8 -->
+  <div class="slide">
+    <img src="assets/img/IMG_7380.JPG">
+    <div class="caption">Le Chat Blanc at the Musée d’Orsay.</div>
+  </div>
+
+  <!-- Buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 </div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+}
+</script>
+
