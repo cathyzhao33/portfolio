@@ -211,18 +211,20 @@ Welcome to my portfolio site.
 let currentIndex = 0;
 let autoTimer = null;
 
+const container = document.querySelector(".slideshow-container");
 const track = document.querySelector(".slides-track");
 const slides = document.getElementsByClassName("slide");
 const dots = document.getElementsByClassName("dot");
-const container = document.querySelector(".slideshow-container");
 
 function updateSlidePosition() {
-  if (!slides.length) return;
+  if (!slides.length || !container || !track) return;
+
   if (currentIndex < 0) currentIndex = slides.length - 1;
   if (currentIndex >= slides.length) currentIndex = 0;
 
-  const offset = -currentIndex * 100;
-  track.style.transform = "translateX(" + offset + "%)";
+  const width = container.clientWidth; // use actual container width in px
+  const offset = -currentIndex * width;
+  track.style.transform = "translateX(" + offset + "px)";
 
   // update dots
   for (let i = 0; i < dots.length; i++) {
@@ -289,12 +291,18 @@ if (container) {
     }
     touchStartX = null;
   }, { passive: true });
+
+  // Recalculate position on resize so slide stays aligned
+  window.addEventListener("resize", function() {
+    updateSlidePosition();
+  });
 }
 
 // Init
 updateSlidePosition();
 startAutoSlide();
 </script>
+
 
 
 
