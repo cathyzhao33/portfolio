@@ -161,21 +161,39 @@ Welcome to my portfolio site.
 
 <script>
 let slideIndex = 1;
+let autoTimer = null;
+
 showSlides(slideIndex);
+startAutoSlide();
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
+  resetAutoSlide();
 }
 
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slide");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+    slides[i].style.display = "none";
   }
-  slides[slideIndex-1].style.display = "block";  
+
+  slides[slideIndex - 1].style.display = "block";
+}
+
+function startAutoSlide() {
+  autoTimer = setInterval(() => {
+    showSlides(++slideIndex);
+  }, 5000); // 5 seconds per slide
+}
+
+function resetAutoSlide() {
+  clearInterval(autoTimer);
+  startAutoSlide();
 }
 </script>
+
 
