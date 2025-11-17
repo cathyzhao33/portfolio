@@ -62,7 +62,7 @@ This internship pushed me to dive deeply into unfamiliar systems, navigate ambig
 </figure>
 
 <figure>
-  <img src="assets/img/IMG_1847.HEIC" alt="Description for picture 5" style="max-width:100%;">
+  <img src="assets/img/IMG_1847.JPG" alt="Description for picture 5" style="max-width:100%;">
   <figcaption>
     <p>First time going to Apple Fest, a huge fall tradition in Ithaca that attracts locals and students from the surrounding area.</p>
   </figcaption>
