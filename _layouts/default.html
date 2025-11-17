@@ -42,6 +42,17 @@
   </style>
 </head>
 
+<script>
+function contactConfirm() {
+  const result = confirm("Would you like to contact me by email?");
+  if (result) {
+    window.location.href = "mailto:cathyzhao33@gmail.com"; 
+  }
+  // returning false prevents default link behavior
+  return false;
+}
+</script>
+
 <body>
 
   <!-- NAVBAR -->
@@ -50,6 +61,7 @@
     <a href="{{ '/experience' | relative_url }}">Internship</a>
     <a href="{{ '/#gallery' | relative_url }}">Gallery</a>
     <a href="{{ '/resume.pdf' | relative_url }}">Resume</a>
+    <a href="#" onclick="return contactConfirm()">Contact</a>
   </nav>
 
   <!-- MAIN CONTENT -->
