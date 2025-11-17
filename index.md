@@ -45,43 +45,12 @@ This internship pushed me to dive deeply into unfamiliar systems, navigate ambig
 
 ## Gallery
 
-Below are 8 photos with short descriptions.  
-Replace the image filenames and text with your own.
-
 <div class="gallery">
-
-<figure>
-  <img src="assets/img/IMG_5800.JPG" alt="Description for picture 1" style="max-width:100%;">
-  <figcaption>
-    <p>First time trying real Texas BBQ. I spent two summers interning in Austin with the same team, and everyone told me that tasting authentic BBQ was a must.</p>
-  </figcaption>
-</figure>
-
-<figure>
-  <img src="assets/img/IMG_7380.JPG" alt="Description for picture 2" style="max-width:100%;">
-  <figcaption>
-    <p>Le Chat Blanc at the Musée d’Orsay. A little strange, a little cute—this cat mid-stretch somehow captures exactly what I love about cats.</p>
-  </figcaption>
-</figure>
 
 <figure>
   <img src="assets/img/IMG_2794.JPG" alt="Description for picture 3" style="max-width:100%;">
   <figcaption>
     <p>Lights on Lake Union from my hometown, Seattle, Washington.</p>
-  </figcaption>
-</figure>
-
-<figure>
-  <img src="assets/img/IMG_6239.JPG" alt="Description for picture 4" style="max-width:100%;">
-  <figcaption>
-    <p>Dessert from my favorite restaurant during my internship. One of my favorite parts of living in a new city was discovering local restaurants and dessert spots.</p>
-  </figcaption>
-</figure>
-
-<figure>
-  <img src="assets/img/IMG_1847.HEIC" alt="Description for picture 5" style="max-width:100%;">
-  <figcaption>
-    <p>First time going to Apple Fest, a huge fall tradition in Ithaca that attracts locals and students from the surrounding area.</p>
   </figcaption>
 </figure>
 
@@ -93,6 +62,13 @@ Replace the image filenames and text with your own.
 </figure>
 
 <figure>
+  <img src="assets/img/IMG_1847.HEIC" alt="Description for picture 5" style="max-width:100%;">
+  <figcaption>
+    <p>First time going to Apple Fest, a huge fall tradition in Ithaca that attracts locals and students from the surrounding area.</p>
+  </figcaption>
+</figure>
+
+<figure>
   <img src="assets/img/IMG_3226.JPG" alt="Description for picture 7" style="max-width:100%;">
   <figcaption>
     <p>Viewing the night sky at Cornell’s Fuertes Observatory with friends. This antique telescope is one of the few that has its original, unmodified clock drive left in operation.</p>
@@ -100,9 +76,30 @@ Replace the image filenames and text with your own.
 </figure>
 
 <figure>
+  <img src="assets/img/IMG_5800.JPG" alt="Description for picture 1" style="max-width:100%;">
+  <figcaption>
+    <p>First time trying real Texas BBQ. I spent two summers interning in Austin with the same team, and everyone told me that tasting authentic BBQ was a must.</p>
+  </figcaption>
+</figure>
+
+<figure>
   <img src="assets/img/IMG_7682.JPG" alt="Description for picture 8" style="max-width:100%;">
   <figcaption>
     <p>Lunch from leftover conference catering at work. We had these “vulture” Slack channels where people would post about free food, and sprinting over with my teammates to see what was left became one of my favorite memories from the internship.</p>
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="assets/img/IMG_6239.JPG" alt="Description for picture 4" style="max-width:100%;">
+  <figcaption>
+    <p>Dessert from my favorite restaurant during my internship. One of my favorite parts of living in a new city was discovering local restaurants and dessert spots.</p>
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="assets/img/IMG_7380.JPG" alt="Description for picture 2" style="max-width:100%;">
+  <figcaption>
+    <p>Le Chat Blanc at the Musée d’Orsay. A little strange, a little cute—this cat mid-stretch somehow captures exactly what I love about cats.</p>
   </figcaption>
 </figure>
 
