@@ -1,10 +1,16 @@
 ---
 layout: default
-title: "Home"
+title: "Cathy Zhao"
 ---
 
-# Welcome
+# Hi, I'm Cathy!
 
-This is your site’s home page.  
-You can replace this text with whatever you want.
+Welcome to my portfolio website.
 
+## Projects
+- Project A
+- Project B
+- Project C
+
+## About Me
+Add your bio here.
