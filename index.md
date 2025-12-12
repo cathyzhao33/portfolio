@@ -53,7 +53,7 @@ Outside of tech, I love traveling, working on jigsaw puzzles, and trying new res
 /* Skills scrolling container */
 .skills-container {
   overflow: hidden;
-  background: #f9f9f9;
+  background: transparent;
   padding: 2rem 0;
   margin: 2rem 0;
   border-radius: 8px;
