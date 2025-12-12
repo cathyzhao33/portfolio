@@ -47,6 +47,7 @@ Hi! I'm a Computer Science student at Cornell originally from Seattle. I spent t
 I love the challenge of untangling complex systems—whether that's debugging module compatibility issues in JavaScript, optimizing database queries, or analyzing text computationally. I'm seeking full-time roles where I can continue growing as an engineer and contribute to meaningful projects.
 
 Outside of tech, I love traveling, working on jigsaw puzzles, and trying new restaurants.
+
 ---
 
 ## Resume
