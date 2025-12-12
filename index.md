@@ -8,36 +8,7 @@ title: "Cathy Zhao"
 h1, h2 {
   margin-top: 1.5rem;
 }
-.resume-button {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 1px solid #555;
-  border-radius: 4px;
-  text-decoration: none;
-}
-.resume-button:hover {
-  background: #f5f5f5;
-}
 
-/* Gallery grid */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-.gallery figure {
-  margin: 0;
-}
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-.gallery figcaption {
-  font-size: 0.9rem;
-  margin-top: 0.4rem;
-}
 </style>
 
 # Cathy Zhao
@@ -109,7 +80,7 @@ Outside of tech, I love traveling, working on jigsaw puzzles, and trying new res
         <path fill="#FF9900" d="M273.5 143.7c-32.9 24.3-80.7 37.2-121.8 37.2-57.6 0-109.5-21.3-148.7-56.7-3.1-2.8-.3-6.6 3.4-4.4 42.4 24.6 94.7 39.5 148.8 39.5 36.5 0 76.6-7.6 113.5-23.2 5.5-2.5 10.2 3.6 4.8 7.6z"/>
         <path fill="#FF9900" d="M287.2 128.1c-4.2-5.4-27.8-2.6-38.5-1.3-3.2.4-3.7-2.4-.8-4.5 18.8-13.2 49.7-9.4 53.3-5 3.6 4.5-1 35.4-18.6 50.2-2.7 2.3-5.3 1.1-4.1-1.9 4-9.9 12.9-32.2 8.7-37.5z"/>
       </svg>
-      <span>AWS</span>
+      <span>AWS1</span>
     </div>
 
     <div class="skill-item">
