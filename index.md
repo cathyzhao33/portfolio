@@ -80,6 +80,14 @@ Outside of tech, I love traveling, working on jigsaw puzzles, and trying new res
   color: #333;
 }
 
+.skill-item svg {
+  display: block;
+}
+
+.skill-item svg[viewBox="0 0 304 182"] {
+  margin-top: 10px; /* Adjust this value to align AWS with other logos */
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
