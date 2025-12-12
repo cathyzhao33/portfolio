@@ -42,8 +42,11 @@ h1, h2 {
 
 # Cathy Zhao
 
-Welcome to my portfolio site.
+Hi! I'm a Computer Science student at Cornell originally from Seattle. I spent the past two summers in Austin working as a Software Development Engineer Intern at Amazon Web Services, where I built infrastructure tools for AWS Marketplace.
 
+I love the challenge of untangling complex systems—whether that's debugging module compatibility issues in JavaScript, optimizing database queries, or analyzing text computationally. I'm seeking full-time roles where I can continue growing as an engineer and contribute to meaningful projects.
+
+Outside of tech, I love traveling, working on jigsaw puzzles, and trying new restaurants.
 ---
 
 ## Resume
