@@ -183,12 +183,6 @@ Outside of tech, I love traveling, working on jigsaw puzzles, and trying new res
 
 ---
 
-## Resume
-
-[Download my resume](./resume.pdf){: .resume-button }
-
----
-
 ## Gallery {#gallery}
 
 <!-- SLIDESHOW -->
