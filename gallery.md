@@ -188,37 +188,15 @@ function showSlides(n) {
 function plusSlides(n) {
   slideIndex += n;
   showSlides(slideIndex);
-  resetAutoSlide();
 }
 
 function currentSlide(n) {
   slideIndex = n;
   showSlides(slideIndex);
-  resetAutoSlide();
-}
-
-function startAutoSlide() {
-  autoTimer = setInterval(function() {
-    slideIndex++;
-    showSlides(slideIndex);
-  }, 10000); // 10 seconds per slide
-}
-
-function resetAutoSlide() {
-  clearInterval(autoTimer);
-  startAutoSlide();
 }
 
 // Pause on hover
 if (container) {
-  container.addEventListener("mouseenter", function() {
-    clearInterval(autoTimer);
-  });
-
-  container.addEventListener("mouseleave", function() {
-    startAutoSlide();
-  });
-
   // Swipe on mobile
   let touchStartX = null;
 
@@ -245,5 +223,4 @@ if (container) {
 
 // Init
 showSlides(slideIndex);
-startAutoSlide();
 </script>
