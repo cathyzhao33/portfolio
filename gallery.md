@@ -93,49 +93,49 @@ title: "Gallery"
   <!-- 1 -->
   <div class="slide">
     <img src="assets/img/IMG_2794.JPG" alt="Lights on Lake Union" />
-    <div class="caption">Lights on Lake Union from my hometown, Seattle, Washington.</div>
+    <div class="caption">The glow of Lake Union from my hometown, Seattle, a place that taught me to appreciate both technological innovation and the natural landscapes that ground us.</div>
   </div>
 
   <!-- 2 -->
   <div class="slide">
     <img src="assets/img/IMG_3860.JPG" alt="Cherry blossoms at UW" />
-    <div class="caption">Cherry blossoms at the University of Washington.</div>
+    <div class="caption">Viewing the cherry blossoms at UW every year is a family tradition that connects me to Seattle even from across the country. The fleeting beauty of these blooms has always reminded me to appreciate temporal moments.</div>
   </div>
 
   <!-- 3 -->
   <div class="slide">
     <img src="assets/img/IMG_1847.JPG" alt="Apple Fest in Ithaca" />
-    <div class="caption">First time going to Apple Fest in Ithaca.</div>
+    <div class="caption">First time going to Apple Fest, a huge fall tradition in Ithaca that attracts locals and students from the surrounding area. The best way to belong somewhere new is to genuinely engage with what makes it unique.</div>
   </div>
 
   <!-- 4 -->
   <div class="slide">
     <img src="assets/img/IMG_3226.JPG" alt="Fuertes Observatory" />
-    <div class="caption">Viewing the night sky at Cornell's Fuertes Observatory.</div>
+    <div class="caption">Viewing the night sky at Cornell’s Fuertes Observatory with friends. This antique telescope is one of the few that has its original, unmodified clock drive left in operation. Some of the most valuable moments in a new place come from following curiosity rather than practicality.</div>
   </div>
 
   <!-- 5 -->
   <div class="slide">
     <img src="assets/img/IMG_5800.JPG" alt="Texas BBQ" />
-    <div class="caption">Trying real Texas BBQ in Austin.</div>
+    <div class="caption">First time trying real Texas BBQ. I spent two summers interning in Austin with the same team, and everyone told me that tasting authentic BBQ was a must. Some of my best memories from that summer were from discovering what made Austin different from everywhere else I'd lived.</div>
   </div>
 
   <!-- 6 -->
   <div class="slide">
     <img src="assets/img/IMG_7682.JPG" alt="Free lunch at work" />
-    <div class="caption">Free lunch from leftover conference catering.</div>
+    <div class="caption">Lunch from leftover conference catering at work. We had these “vulture” Slack channels where people would post about free food, and sprinting over with my teammates to see what was left became one of my favorite memories from the internship. It was a sad, sad day when we were moved to a smaller building with slim pickings.</div>
   </div>
 
   <!-- 7 -->
   <div class="slide">
     <img src="assets/img/IMG_6239.JPG" alt="Dessert in Austin" />
-    <div class="caption">Dessert from my favorite restaurant during my internship.</div>
+    <div class="caption">Dessert from my favorite restaurant during my internship. One of my favorite parts of living in a new city was discovering local restaurants and dessert spots. Tastes like burnt charcoal (in a good way).</div>
   </div>
 
   <!-- 8 -->
   <div class="slide">
     <img src="assets/img/IMG_7380.JPG" alt="Le Chat Blanc" />
-    <div class="caption">Le Chat Blanc at the Musée d'Orsay.</div>
+    <div class="caption">Le Chat Blanc at the Musée d’Orsay. A little strange, a little cute—this cat mid-stretch somehow captures exactly what I love about cats.</div>
   </div>
 
   <!-- Buttons -->
@@ -201,7 +201,7 @@ function startAutoSlide() {
   autoTimer = setInterval(function() {
     slideIndex++;
     showSlides(slideIndex);
-  }, 5000); // 5 seconds per slide
+  }, 10000); // 10 seconds per slide
 }
 
 function resetAutoSlide() {
